@@ -44,15 +44,15 @@ public class FIXMessage extends FIXGroupContainer {
         for (int i = 0; i <= lastTagIndex; i++) {
             tags[i].reset();
         }
-        for (int i = 0; i < groupIndex; i++) {
+        for (int i = 0; i <= groupIndex; i++) {
             groups[i].reset();
         }
         this.lastTagIndex = -1;
+        this.groupIndex = -1;
         this.checkSum = 0;
         this.bodyLen = 0;
         this.parsedRepeatingGroup = false;
         this.tagIndex.clear();
-        this.groupIndex = -1;
     }
 
 
